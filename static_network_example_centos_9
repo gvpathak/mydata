@@ -1,0 +1,28 @@
+#create two saparate files under path /etc/NetworkManager/system-connections/ens33.nmconnection
+#NOTE: file name ens33.connection can change depending upon your system configuration
+#below configuration is the actual static ip
+#change DNS & ip addresses as per your requirement
+[connection]
+id=ens33
+uuid=9663c9a0-43cd-399b-ab07-eb7bb91bfb82
+type=ethernet
+autoconnect-priority=-999
+interface-name=ens33
+timestamp=1694431924
+
+[ethernet]
+
+[ipv4]
+address1=192.168.1.55/24,192.168.1.1
+dns=9.9.9.9;8.8.4.4;8.8.8.8;
+method=manual
+
+[ipv6]
+addr-gen-mode=eui64
+method=auto
+
+[proxy]
+
+
+
+
