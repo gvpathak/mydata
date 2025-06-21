@@ -3,6 +3,14 @@
 #below configuration is the bridge created between actual static ip, to use two disctinct interfaces
 #change DNS & ip addresses as per your requirement
 #once both files are created , ensure to restart NetworkManager.service i.e. systemctl restart NetworkManager.service
+#restart services i.e. systemctl restart systemd-networkd.service systemd-resolved.service
+#if you face issues, then try to delete the /etc/resolv.conf and create it again with below contents, ensure change dns server names as per your configuration
+# nameserver 9.9.9.9
+# nameserver 1.1.1.1
+# nameserver 192.168.1.1
+# search  example.com
+# verify your connections using ifconfig command, network interface ens33 and ens34 should be visible.
+
 [connection]
 id=ens34
 uuid=366141fc-602e-41f9-a871-a4cdc063d4db
