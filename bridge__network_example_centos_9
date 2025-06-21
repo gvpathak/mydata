@@ -1,0 +1,25 @@
+#create two saparate files under path /etc/NetworkManager/system-connections/ens34.nmconnection
+#NOTE: file name ens34.connection can change depending upon your system configuration
+#below configuration is the bridge created between actual static ip, to use two disctinct interfaces
+#change DNS & ip addresses as per your requirement
+#once both files are created , ensure to restart NetworkManager.service i.e. systemctl restart NetworkManager.service
+[connection]
+id=ens34
+uuid=366141fc-602e-41f9-a871-a4cdc063d4db
+type=bridge
+interface-name=ens34
+
+[ethernet]
+
+[bridge]
+
+[ipv4]
+address1=192.168.1.56/24,192.168.1.1
+dns=9.9.9.9;8.8.4.4;8.8.8.8;
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
