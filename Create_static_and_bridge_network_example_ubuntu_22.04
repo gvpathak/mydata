@@ -8,6 +8,7 @@
 # nameserver 1.1.1.1
 # nameserver 192.168.1.1
 # search  example.com
+# verify your connections using ifconfig command, network interface ens33 and ens34 should be visible.
 #
 network:
   renderer: networkd
